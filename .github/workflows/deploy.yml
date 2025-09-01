@@ -2,33 +2,29 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # Run when pushing to main branch
+    branches: [main] # Runs on push to main branch
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build and Export
-        run: |
-          npm run build
-          npm run export
+      - name: Build project
+        run: npm run export
 
-      - name: Deploy 🚀 to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages     # Deployment branch
-          folder: out          # Exported folder
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
