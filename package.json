@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "type-check": "tsc --noEmit",
-    "export": "next build && next export"
+      "dev": "next dev",
+      "build": "next build",
+      "export": "next export",
+      "start": "next start",
+      "lint": "eslint",
+      "lint:fix": "eslint --fix",
+      "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.4",
