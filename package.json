@@ -3,14 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-      "dev": "next dev",
-      "build": "next build --no-lint",
-      "export": "next export",
-      "start": "next start",
-      "lint": "eslint",
-      "lint:fix": "eslint --fix",
-      "type-check": "tsc --noEmit"
-  },
+   "dev": "next dev",
+  "build": "next build --no-lint",   
+  "start": "next start"
+},
   "dependencies": {
     "@react-three/drei": "^10.7.4",
     "@react-three/fiber": "^9.3.0",

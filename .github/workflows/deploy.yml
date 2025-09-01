@@ -2,7 +2,7 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: [main] # Runs on push to main branch
+    branches: [main]
 
 jobs:
   build:
@@ -15,13 +15,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 20  # LTS 20 is safer
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: npm run export
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
