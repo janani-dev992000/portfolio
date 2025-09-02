@@ -36,11 +36,11 @@ const Experience = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-lavender mb-4 font-heading">
+          <h3 className="text-3xl md:text-4xl font-bold text-lavender mb-4 font-heading">
             <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text  animate-gradient">
               Work Experience
             </span>
-          </h2>
+          </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-violet-500 mx-auto mb-6 rounded-full animate-shimmer"></div>
           <p className="text-lg text-purple-900 max-w-3xl mx-auto opacity-90">
             My professional journey and the experiences that have shaped my career
@@ -76,15 +76,15 @@ const Experience = () => {
                   
                   {/* 3D Content Card */}
                   <div className="ml-8 flex-1">
-                    <div className="bg-gradient-to-br from-gray-900/80 via-purple-900/20 to-gray-900/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-purple-500/20 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-1 hover:shadow-3xl hover:shadow-purple-500/30 hover-glow group-hover:border-purple-400/40">
+                    <div className="bg-gradient-to-br from-white-900/80 via-purple-900/20 to-white-900/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-purple-500/20 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-1 hover:shadow-3xl hover:shadow-purple-500/30 hover-glow group-hover:border-purple-400/40">
                       {/* Shine effect overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 via-transparent to-violet-400/10 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
                       
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 relative z-10">
                         <div className="transform transition-transform duration-300 group-hover:translate-x-2">
-                          <h3 className="text-xl font-semibold text-lavender mb-2 font-heading">
+                          <h4 className="text-xl font-semibold text-lavender mb-2 font-heading">
                             {experience.position}
-                          </h3>
+                          </h4>
                           <p className="text-purple-300 font-medium text-lg">
                             {experience.company}
                           </p>
@@ -134,7 +134,7 @@ const Experience = () => {
             
             <div className="relative z-10">
               <h3 className="text-3xl font-semibold text-lavender mb-6 font-heading transform transition-transform duration-500 group-hover:scale-105">
-                <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-400 bg-clip-text ">
                   Let's Work Together
                 </span>
               </h3>

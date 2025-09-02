@@ -15,15 +15,15 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
-            className="text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-800 bg-clip-text text-transparent mb-4 animate-lavender-shimmer"
+          <motion.h3 
+            className="text-xl md:text-5xl font-display font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-800 bg-clip-text text-transparent mb-4 animate-lavender-shimmer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             About Me
-          </motion.h2>
+          </motion.h3>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <motion.h3 
+            <motion.h4
               className="text-3xl font-heading font-semibold text-gray-900 mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               {aboutData.story.title}
-            </motion.h3>
+            </motion.h4>
             <motion.p 
               className="text-gray-600 mb-6 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}

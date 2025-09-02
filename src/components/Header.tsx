@@ -49,7 +49,7 @@ const Header = () => {
                 >
                   <Link
                     href={item.href}
-                    className="relative text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-300 group"
+                    className="relative text-gray-700 hover:text-purple-600 px-3 py-2 text-md font-medium transition-colors duration-300 group"
                   >
                     {item.label}
                     <motion.div

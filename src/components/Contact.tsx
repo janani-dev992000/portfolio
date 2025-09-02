@@ -14,7 +14,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
+          <motion.h3
             className="text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-800 bg-clip-text text-transparent mb-4 animate-lavender-shimmer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -22,7 +22,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             Let's Connect
-          </motion.h2>
+          </motion.h3>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const Contact = () => {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   <span className="text-blue-600 text-3xl">📧</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 text-lg mb-2">Email</h4>
+                <h5 className="font-semibold text-gray-900 text-lg mb-2">Email</h5>
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
@@ -71,7 +71,7 @@ const Contact = () => {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <span className="text-green-600 text-3xl">📱</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 text-lg mb-2">Phone</h4>
+                  <h5 className="font-semibold text-gray-900 text-lg mb-2">Phone</h5>
                   <a
                     href={`tel:${contactInfo.phone}`}
                     className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
@@ -91,7 +91,7 @@ const Contact = () => {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                   <span className="text-purple-600 text-3xl">📍</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 text-lg mb-2">Location</h4>
+                <h5 className="font-semibold text-gray-900 text-lg mb-2">Location</h5>
                 <p className="text-gray-600 font-medium">{contactInfo.location}</p>
               </motion.div>
             </div>

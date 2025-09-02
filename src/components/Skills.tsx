@@ -34,7 +34,7 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
+          <motion.h3
             className="text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-800 bg-clip-text text-transparent mb-4 animate-lavender-shimmer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -42,7 +42,7 @@ const Skills = () => {
             viewport={{ once: true }}
           >
             Skills & Technologies
-          </motion.h2>
+          </motion.h3>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">🖥️</span>
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold text-gray-900">Frontend</h3>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900">Frontend</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.frontend.map((skill, index) => (
@@ -123,7 +123,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">⚙️</span>
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold text-gray-900">Backend</h3>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900">Backend</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.backend.map((skill, index) => (
@@ -168,7 +168,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">🛠️</span>
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold text-gray-900">Tools</h3>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900">Tools</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.tools.map((skill, index) => (
@@ -200,9 +200,9 @@ const Skills = () => {
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <h4 className="text-xl font-semibold text-gray-900 mb-4">
               Always Learning
-            </h3>
+            </h4>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Technology evolves rapidly, and I'm committed to staying up-to-date with the latest 
               trends and best practices. I'm always exploring new frameworks, tools, and methodologies 

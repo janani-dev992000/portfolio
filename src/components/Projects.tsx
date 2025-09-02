@@ -27,7 +27,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
+          <motion.h3
             className="text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-800 bg-clip-text text-transparent mb-4 animate-lavender-shimmer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -35,7 +35,7 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             Featured Projects
-          </motion.h2>
+          </motion.h3>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -78,9 +78,9 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <h4 className=" font-bold text-gray-400 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                <h5 className=" font-bold text-gray-400 mb-2 group-hover:text-purple-600 transition-colors duration-300">
                   {project.title}
-                </h4>
+                </h5>
                 <p className="text-gray-600 text-sm mb-3 leading-relaxed flex-grow">
                   {project.description}
                 </p>

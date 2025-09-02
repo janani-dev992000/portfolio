@@ -38,7 +38,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
     return (
       <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
         <div className="text-center text-gray-600">
-          <p>Optimized view for better performance</p>
+          {/* <p>About MeOptimized view for better performance</p> */}
         </div>
       </div>
     );
