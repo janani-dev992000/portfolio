@@ -1,7 +1,7 @@
 'use client';
 
 import { skills } from '@/lib/data';
-// import Skills3D from './3D/Skills3D';
+import Skills3D from './3D/Skills3D';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -13,12 +13,14 @@ const Skills = () => {
 
   const getSkillLevel = (level: number) => {
     return Array.from({ length: 5 }, (_, i) => (
-      <div
+      <span
         key={i}
-        className={`w-3 h-3 rounded-full ${
-          i < level ? 'bg-blue-600' : 'bg-gray-200'
+        className={`text-lg ${
+          i < level ? 'text-yellow-500' : 'text-gray-300'
         }`}
-      />
+      >
+        ★
+      </span>
     ));
   };
 
@@ -74,7 +76,7 @@ const Skills = () => {
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-white text-2xl">🎨</span>
+                <span className="text-white text-2xl">🖥️</span>
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold text-gray-900">Frontend</h3>
             </motion.div>
@@ -192,7 +194,7 @@ const Skills = () => {
         {/* 3D Skills Visualization */}
         <div className="mt-12">
           {/* <Skills3D skills={skills} /> */}
-          <div className="text-center text-gray-500">3D Skills Visualization (Temporarily Disabled)</div>
+          {/* <div className="text-center text-gray-500">3D Skills Visualization (Temporarily Disabled)</div> */}
         </div>
 
         {/* Additional Info */}

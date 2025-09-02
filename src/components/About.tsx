@@ -1,7 +1,7 @@
 'use client';
 
-import { personalInfo } from '@/lib/data';
-// import Stats3D from './3D/Stats3D';
+import { personalInfo, aboutData } from '@/lib/data';
+import Stats3D from './3D/Stats3D';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -50,7 +50,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              My Story
+              {aboutData.story.title}
             </motion.h3>
             <motion.p 
               className="text-gray-600 mb-6 leading-relaxed"
@@ -61,27 +61,18 @@ const About = () => {
             >
               {personalInfo.bio}
             </motion.p>
-            <motion.p 
-              className="text-gray-600 mb-6 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              I started my journey in web development 3 years ago and have been passionate about creating 
-              digital experiences that make a difference. I believe in clean code, user-centered design, 
-              and continuous learning.
-            </motion.p>
-            <motion.p 
-              className="text-gray-600 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or sharing knowledge with the developer community.
-            </motion.p>
+            {aboutData.story.paragraphs.map((paragraph, index) => (
+              <motion.p 
+                key={index}
+                className="text-gray-600 mb-6 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 + (index * 0.2) }}
+                viewport={{ once: true }}
+              >
+                {paragraph}
+              </motion.p>
+            ))}
           </motion.div>
 
           {/* 3D Stats */}
@@ -92,8 +83,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            {/* <Stats3D /> */}
-            <div className="text-center text-gray-500">3D Stats Visualization (Temporarily Disabled)</div>
+            <Stats3D />
           </motion.div>
         </div>
 
@@ -115,26 +105,7 @@ const About = () => {
             What I Value
           </motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "🎯",
-                title: "Quality",
-                description: "I believe in writing clean, maintainable code and delivering high-quality solutions.",
-                color: "from-purple-400 to-violet-500"
-              },
-              {
-                icon: "🚀",
-                title: "Innovation",
-                description: "Always exploring new technologies and approaches to solve problems creatively.",
-                color: "from-violet-400 to-purple-500"
-              },
-              {
-                icon: "🤝",
-                title: "Collaboration",
-                description: "Working closely with teams and clients to achieve shared goals and success.",
-                color: "from-purple-300 to-violet-400"
-              }
-            ].map((value, index) => (
+            {aboutData.values.map((value, index) => (
               <motion.div 
                 key={index}
                 className="text-center group"

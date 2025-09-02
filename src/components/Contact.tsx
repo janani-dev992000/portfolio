@@ -1,33 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import { contactInfo } from '@/lib/data';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    alert('Thank you for your message! I\'ll get back to you soon.');
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-white to-lavender-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +21,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Get In Touch
+            Let's Connect
           </motion.h2>
           <motion.p 
             className="text-lg text-gray-600 max-w-3xl mx-auto"
@@ -54,77 +30,90 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Have a project in mind or just want to chat? I'd love to hear from you!
+            I'm always open to discussing new opportunities, creative projects, 
+              or just having a chat about technology and development.
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Let's Connect
-            </h3>
-            <p className="text-gray-600 mb-8">
-              I'm always open to discussing new opportunities, creative projects, 
-              or just having a chat about technology and development.
-            </p>
+          <div className="text-center">
 
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  <span className="text-blue-600 text-xl">📧</span>
+         
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <motion.div 
+                className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-blue-600 text-3xl">📧</span>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="text-blue-600 hover:text-blue-700"
-                  >
-                    {contactInfo.email}
-                  </a>
-                </div>
-              </div>
+                <h4 className="font-semibold text-gray-900 text-lg mb-2">Email</h4>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                >
+                  {contactInfo.email}
+                </a>
+              </motion.div>
 
               {contactInfo.phone && (
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-green-600 text-xl">📱</span>
+                <motion.div 
+                  className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-green-600 text-3xl">📱</span>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <a
-                      href={`tel:${contactInfo.phone}`}
-                      className="text-green-600 hover:text-green-700"
-                    >
-                      {contactInfo.phone}
-                    </a>
-                  </div>
-                </div>
+                  <h4 className="font-semibold text-gray-900 text-lg mb-2">Phone</h4>
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                  >
+                    {contactInfo.phone}
+                  </a>
+                </motion.div>
               )}
 
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                  <span className="text-purple-600 text-xl">📍</span>
+              <motion.div 
+                className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-purple-600 text-3xl">📍</span>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-gray-600">{contactInfo.location}</p>
-                </div>
-              </div>
+                <h4 className="font-semibold text-gray-900 text-lg mb-2">Location</h4>
+                <p className="text-gray-600 font-medium">{contactInfo.location}</p>
+              </motion.div>
             </div>
 
             {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-gray-900 mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-semibold text-gray-900 text-xl mb-6 " style={{marginTop:"20px"}}>Follow Me</h4>
+              <div className="flex justify-center space-x-8">
                 {contactInfo.socialLinks.github && (
                   <a
                     href={contactInfo.socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-white hover:bg-gray-700 transition-colors duration-200"
+                    className="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center text-white hover:bg-gray-700 transition-all duration-200 transform hover:scale-110"
                   >
-                    <span className="text-lg">🐙</span>
+                    <span className="text-2xl">🐙</span>
                   </a>
                 )}
                 {contactInfo.socialLinks.linkedin && (
@@ -132,9 +121,9 @@ const Contact = () => {
                     href={contactInfo.socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-200"
+                    className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-200 transform hover:scale-110"
                   >
-                    <span className="text-lg">💼</span>
+                    <span className="text-2xl">💼</span>
                   </a>
                 )}
                 {contactInfo.socialLinks.twitter && (
@@ -142,9 +131,9 @@ const Contact = () => {
                     href={contactInfo.socialLinks.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center text-white hover:bg-blue-500 transition-colors duration-200"
+                    className="w-14 h-14 bg-blue-400 rounded-xl flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-200 transform hover:scale-110"
                   >
-                    <span className="text-lg">🐦</span>
+                    <span className="text-2xl">🐦</span>
                   </a>
                 )}
                 {contactInfo.socialLinks.website && (
@@ -152,87 +141,13 @@ const Contact = () => {
                     href={contactInfo.socialLinks.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-white hover:bg-green-700 transition-colors duration-200"
+                    className="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center text-white hover:bg-green-700 transition-all duration-200 transform hover:scale-110"
                   >
-                    <span className="text-lg">🌐</span>
+                    <span className="text-2xl">🌐</span>
                   </a>
                 )}
               </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="What's this about?"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell me about your project or just say hello!"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
-              >
-                Send Message
-              </button>
-            </form>
+            </motion.div>
           </div>
         </div>
       </div>

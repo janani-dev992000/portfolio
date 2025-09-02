@@ -85,7 +85,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get In Touch</span>
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Let's Connect</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </motion.a>
             </motion.div>

@@ -148,7 +148,7 @@ const Experience = () => {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/button:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative z-10 flex items-center">
-                  Get In Touch
+                  Let's Connect
                   <svg className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover/button:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

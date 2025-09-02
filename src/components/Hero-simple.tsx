@@ -32,7 +32,7 @@ const Hero = () => {
                 href="#contact"
                 className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-xl font-semibold"
               >
-                Get In Touch
+                Let's Connect
               </a>
             </div>
           </div>
