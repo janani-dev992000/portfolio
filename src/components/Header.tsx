@@ -32,7 +32,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="#home" className="text-2xl font-display font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text  animate-lavender-shimmer">
+            <Link href="#home" className="text-2xl font-display font-bold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text  animate-lavender-shimmer dark:text-black">
               Portfolio
             </Link>
           </motion.div>

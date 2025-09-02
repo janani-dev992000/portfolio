@@ -7,10 +7,15 @@ import FloatingElements from './3D/FloatingElements';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-lavender-50 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16 relative overflow-hidden">
-      {/* 3D Background */}
-      <AnimatedBackground />
-      <FloatingElements />
+    <section 
+      id="home" 
+      className="hero-mobile-dark-bg min-h-screen flex items-center justify-center pt-16 relative overflow-hidden"
+    >
+      {/* 3D Background - Only on desktop */}
+      <div className="hidden lg:block">
+        <AnimatedBackground />
+        <FloatingElements />
+      </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -93,7 +98,7 @@ const Hero = () => {
 
           {/* Avatar */}
           <motion.div 
-            className="flex justify-center lg:justify-end"
+            className="hidden lg:flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

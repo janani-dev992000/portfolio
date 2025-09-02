@@ -435,6 +435,23 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
 }
 
+/* Hero Background Styles */
+.hero-mobile-dark-bg {
+  background: linear-gradient(to bottom right, #faf5ff, #f3e8ff, #ede9fe);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-mobile-dark-bg {
+    background: #1f2937 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 1024px) {
+  .hero-mobile-dark-bg {
+    background: linear-gradient(to bottom right, #111827, #1f2937, #111827) !important;
+  }
+}
+
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
