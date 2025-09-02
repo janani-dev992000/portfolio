@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-white to-lavender-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-white to-lavender-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -24,7 +24,7 @@ const Contact = () => {
             Let's Connect
           </motion.h3>
           <motion.p 
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -42,19 +42,19 @@ const Contact = () => {
          
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div 
-                className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-blue-600 text-3xl">📧</span>
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-blue-600 dark:text-blue-400 text-3xl">📧</span>
                 </div>
-                <h5 className="font-semibold text-gray-900 text-lg mb-2">Email</h5>
+                <h5 className="font-semibold text-gray-900 dark:text-gray-100 text-lg mb-2">Email</h5>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
                 >
                   {contactInfo.email}
                 </a>
@@ -62,19 +62,19 @@ const Contact = () => {
 
               {contactInfo.phone && (
                 <motion.div 
-                  className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-green-600 text-3xl">📱</span>
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-green-600 dark:text-green-400 text-3xl">📱</span>
                   </div>
-                  <h5 className="font-semibold text-gray-900 text-lg mb-2">Phone</h5>
+                  <h5 className="font-semibold text-gray-900 dark:text-gray-100 text-lg mb-2">Phone</h5>
                   <a
                     href={`tel:${contactInfo.phone}`}
-                    className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                    className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors duration-200"
                   >
                     {contactInfo.phone}
                   </a>
@@ -82,17 +82,17 @@ const Contact = () => {
               )}
 
               <motion.div 
-                className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-purple-600 text-3xl">📍</span>
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-purple-600 dark:text-purple-400 text-3xl">📍</span>
                 </div>
-                <h5 className="font-semibold text-gray-900 text-lg mb-2">Location</h5>
-                <p className="text-gray-600 font-medium">{contactInfo.location}</p>
+                <h5 className="font-semibold text-gray-900 dark:text-gray-100 text-lg mb-2">Location</h5>
+                <p className="text-gray-600 dark:text-gray-400 font-medium">{contactInfo.location}</p>
               </motion.div>
             </div>
 
@@ -104,7 +104,7 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h4 className="font-semibold text-gray-900 text-xl mb-6 " style={{marginTop:"20px"}}>Follow Me</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-xl mb-6 " style={{marginTop:"20px"}}>Follow Me</h4>
               <div className="flex justify-center space-x-8">
                 {contactInfo.socialLinks.github && (
                   <a

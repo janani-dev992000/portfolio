@@ -16,7 +16,7 @@ const Skills = () => {
       <span
         key={i}
         className={`text-lg ${
-          i < level ? 'text-yellow-500' : 'text-gray-300'
+          i < level ? 'text-yellow-500' : 'text-gray-300 dark:text-gray-600'
         }`}
       >
         ★
@@ -25,7 +25,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-white to-lavender-50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-white to-lavender-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -44,7 +44,7 @@ const Skills = () => {
             Skills & Technologies
           </motion.h3>
           <motion.p 
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -57,7 +57,7 @@ const Skills = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Frontend Skills */}
           <motion.div 
-            className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-lavender-glow"
+            className="bg-gradient-to-br from-purple-50 to-violet-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300 animate-lavender-glow"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,7 +78,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">🖥️</span>
               </motion.div>
-              <h4 className="text-2xl font-heading font-semibold text-gray-900">Frontend</h4>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900 dark:text-black">Frontend</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.frontend.map((skill, index) => (
@@ -91,7 +91,7 @@ const Skills = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className="text-gray-700 font-medium group-hover:text-purple-600 transition-colors duration-300">{skill.name}</span>
+                  <span className="text-gray-700 dark:text-white font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">{skill.name}</span>
                   <div className="flex gap-1">
                     {getSkillLevel(skill.level)}
                   </div>
@@ -102,7 +102,7 @@ const Skills = () => {
 
           {/* Backend Skills */}
           <motion.div 
-            className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -123,7 +123,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">⚙️</span>
               </motion.div>
-              <h4 className="text-2xl font-heading font-semibold text-gray-900">Backend</h4>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900 dark:text-black">Backend</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.backend.map((skill, index) => (
@@ -136,7 +136,7 @@ const Skills = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className="text-gray-700 font-medium group-hover:text-green-600 transition-colors duration-300">{skill.name}</span>
+                  <span className="text-gray-700 dark:text-white font-medium group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">{skill.name}</span>
                   <div className="flex gap-1">
                     {getSkillLevel(skill.level)}
                   </div>
@@ -147,7 +147,7 @@ const Skills = () => {
 
           {/* Tools */}
           <motion.div 
-            className="bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-lg dark:shadow-gray-900 hover:shadow-xl dark:hover:shadow-gray-800 transition-shadow duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -168,7 +168,7 @@ const Skills = () => {
               >
                 <span className="text-white text-2xl">🛠️</span>
               </motion.div>
-              <h4 className="text-2xl font-heading font-semibold text-gray-900">Tools</h4>
+              <h4 className="text-2xl font-heading font-semibold text-gray-900 dark:text-black">Tools</h4>
             </motion.div>
             <div className="space-y-4">
               {skillCategories.tools.map((skill, index) => (
@@ -181,7 +181,7 @@ const Skills = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className="text-gray-700 font-medium group-hover:text-purple-600 transition-colors duration-300">{skill.name}</span>
+                  <span className="text-gray-700 dark:text-white font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">{skill.name}</span>
                   <div className="flex gap-1">
                     {getSkillLevel(skill.level)}
                   </div>
@@ -199,11 +199,11 @@ const Skills = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="bg-gray-50 dark:bg-black rounded-lg p-8">
+            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               Always Learning
             </h4>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Technology evolves rapidly, and I'm committed to staying up-to-date with the latest 
               trends and best practices. I'm always exploring new frameworks, tools, and methodologies 
               to improve my skills and deliver better solutions.

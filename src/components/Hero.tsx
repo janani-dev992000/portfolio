@@ -7,7 +7,7 @@ import FloatingElements from './3D/FloatingElements';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-lavender-50 to-purple-100 pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-lavender-50 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16 relative overflow-hidden">
       {/* 3D Background */}
       <AnimatedBackground />
       <FloatingElements />
@@ -22,7 +22,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.h2
-              className="text-5xl md:text-7xl font-display font-bold text-gray-900 mb-6"
+              className="text-5xl md:text-7xl font-display font-bold text-gray-900 dark:text-gray-100 mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -44,7 +44,7 @@ const Hero = () => {
             </motion.h2>
             
             <motion.h3
-              className="text-2xl md:text-4xl font-heading font-semibold text-gray-700 mb-6"
+              className="text-2xl md:text-4xl font-heading font-semibold text-gray-700 dark:text-gray-300 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -53,7 +53,7 @@ const Hero = () => {
             </motion.h3>
             
             <motion.p 
-              className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed"
+              className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -80,7 +80,7 @@ const Hero = () => {
               
               <motion.a
                 href="#contact"
-                className="group relative border-2 border-purple-300 text-purple-500 px-8 py-4 rounded-xl font-semibold overflow-hidden"
+                className="group relative border-2 border-purple-300 dark:border-purple-400 text-purple-500 dark:text-purple-300 px-8 py-4 rounded-xl font-semibold overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -107,7 +107,7 @@ const Hero = () => {
               />
               
               {/* Static image container */}
-              <div className="relative w-80 h-80 rounded-full bg-white p-2">
+              <div className="relative w-80 h-80 rounded-full bg-white dark:bg-gray-800 p-2">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}

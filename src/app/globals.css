@@ -50,6 +50,25 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    
+    /* Dark mode purple palette */
+    --primary: #c084fc;
+    --primary-dark: #a855f7;
+    --secondary: #d8b4fe;
+    --accent: #e9d5ff;
+    
+    /* Dark mode specific purple tones */
+    --lavender: #1e1b4b;      /* dark navy for dark mode */
+    --purple-light: #312e81;  /* dark purple */
+    --purple-medium: #4c1d95; /* medium dark purple */
+    --purple-dark: #6b21a8;   /* lighter purple for contrast */
+    
+    /* Adjust gradient colors for dark mode */
+    --gradient-primary: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4f46e5 100%);
+    --gradient-secondary: linear-gradient(135deg, #312e81 0%, #3730a3 50%, #4338ca 100%);
+    --gradient-accent: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
+    --gradient-lavender: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+    --gradient-purple: linear-gradient(135deg, #6b21a8 0%, #7c3aed 50%, #8b5cf6 100%);
   }
 }
 
@@ -63,10 +82,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body{
-  background-color: white;
 }
 /* Smooth scrolling */
 html {
@@ -89,6 +104,21 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #2d2d2d;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
 }
 
 /* Advanced Animation utilities */
@@ -313,12 +343,26 @@ html {
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
+/* Dark mode hover effects */
+@media (prefers-color-scheme: dark) {
+  .hover-lift:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+}
+
 .hover-glow {
   transition: box-shadow 0.3s ease;
 }
 
 .hover-glow:hover {
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+/* Dark mode glow */
+@media (prefers-color-scheme: dark) {
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.7);
+  }
 }
 
 .hover-scale {
@@ -333,6 +377,14 @@ html {
 *:focus {
   outline: 2px solid #6366f1;
   outline-offset: 2px;
+}
+
+/* Dark mode focus styles */
+@media (prefers-color-scheme: dark) {
+  *:focus {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
+  }
 }
 
 /* Typography classes - Elegant with Libre Baskerville */

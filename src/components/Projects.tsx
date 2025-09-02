@@ -18,7 +18,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-lavender-50 to-purple-100">
+    <section id="projects" className="py-20 bg-gradient-to-br from-lavender-50 to-purple-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -37,7 +37,7 @@ const Projects = () => {
             Featured Projects
           </motion.h3>
           <motion.p 
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -52,7 +52,7 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <motion.div 
               key={project.id} 
-              className="relative group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+              className="relative group bg-white dark:bg-black rounded-lg shadow-lg dark:shadow-gray-900 overflow-hidden hover:shadow-xl dark:hover:shadow-gray-800 transition-all duration-300 h-full flex flex-col"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -78,10 +78,10 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <h5 className=" font-bold text-gray-400 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                <h5 className=" font-bold text-gray-400 dark:text-gray-300 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                   {project.title}
                 </h5>
-                <p className="text-gray-600 text-sm mb-3 leading-relaxed flex-grow">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 leading-relaxed flex-grow">
                   {project.description}
                 </p>
                 
@@ -90,7 +90,7 @@ const Projects = () => {
                   {project.technologies.slice(0, 3).map((tech, techIndex) => (
                     <motion.span
                       key={tech}
-                      className="bg-gradient-to-r from-purple-100 to-violet-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium hover:shadow-sm transition-all duration-200"
+                      className="bg-gradient-to-r from-purple-100 to-violet-100 dark:from-purple-900 dark:to-violet-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full text-xs font-medium hover:shadow-sm transition-all duration-200"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.6 + techIndex * 0.1 }}
@@ -103,7 +103,7 @@ const Projects = () => {
                   {project.technologies.length > 3 && (
                     <button
                       onClick={() => handleShowAllTech(project.technologies)}
-                      className="bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer hover:shadow-sm"
+                      className="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer hover:shadow-sm"
                     >
                       +{project.technologies.length - 3} more
                     </button>
@@ -129,7 +129,7 @@ const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 border border-purple-600 text-purple-600 px-4 py-2 rounded-md text-sm font-semibold text-center hover:bg-purple-600 hover:text-white transition-all duration-300"
+                      className="flex-1 border border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 px-4 py-2 rounded-md text-sm font-semibold text-center hover:bg-purple-600 dark:hover:bg-purple-400 hover:text-white dark:hover:text-black transition-all duration-300"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -146,7 +146,7 @@ const Projects = () => {
         {otherProjects.length > 0 && (
           <>
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                 Other Projects
               </h3>
             </div>
@@ -154,7 +154,7 @@ const Projects = () => {
               {otherProjects.map((project, index) => (
                 <motion.div 
                   key={project.id} 
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group h-full flex flex-col"
+                  className="bg-white dark:bg-black rounded-lg shadow-md dark:shadow-gray-900 overflow-hidden hover:shadow-lg dark:hover:shadow-gray-800 transition-all duration-300 group h-full flex flex-col"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -170,17 +170,17 @@ const Projects = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4 flex flex-col flex-grow">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                       {project.title}
                     </h4>
-                    <p className="text-gray-600 text-sm mb-3 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 flex-grow">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
-                          className="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-medium"
+                          className="bg-purple-50 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded text-xs font-medium"
                         >
                           {tech}
                         </span>
@@ -188,7 +188,7 @@ const Projects = () => {
                       {project.technologies.length > 3 && (
                         <button
                           onClick={() => handleShowAllTech(project.technologies)}
-                          className="bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 px-2 py-1 rounded text-xs font-medium transition-all duration-200 cursor-pointer"
+                          className="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 px-2 py-1 rounded text-xs font-medium transition-all duration-200 cursor-pointer"
                         >
                           +{project.technologies.length - 3} more
                         </button>
@@ -200,7 +200,7 @@ const Projects = () => {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-purple-600 hover:text-purple-700 text-sm font-medium transition-colors duration-300"
+                          className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 text-sm font-medium transition-colors duration-300"
                         >
                           Demo →
                         </a>
@@ -210,7 +210,7 @@ const Projects = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-600 hover:text-gray-800 text-sm font-medium transition-colors duration-300"
+                          className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 text-sm font-medium transition-colors duration-300"
                         >
                           Code →
                         </a>
@@ -234,17 +234,17 @@ const Projects = () => {
               onClick={() => setShowTechModal(false)}
             >
               <motion.div
-                className="bg-white rounded-lg p-6 max-w-md w-full max-h-96 overflow-y-auto"
+                className="bg-white dark:bg-black rounded-lg p-6 max-w-md w-full max-h-96 overflow-y-auto border dark:border-gray-700"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-semibold text-gray-900">Technologies Used</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Technologies Used</h3>
                   <button
                     onClick={() => setShowTechModal(false)}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                    className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -255,7 +255,7 @@ const Projects = () => {
                   {selectedTechnologies.map((tech, index) => (
                     <motion.span
                       key={tech}
-                      className="bg-gradient-to-r from-purple-100 to-violet-100 text-purple-700 px-3 py-2 rounded-full text-sm font-medium"
+                      className="bg-gradient-to-r from-purple-100 to-violet-100 dark:from-purple-900 dark:to-violet-900 text-purple-700 dark:text-purple-300 px-3 py-2 rounded-full text-sm font-medium"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.2, delay: index * 0.05 }}
