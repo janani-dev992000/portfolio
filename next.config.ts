@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 
-  //  output: 'export',
+   output: 'export',
  images: {
-    //  unoptimized: true, 
+     unoptimized: true, 
     remotePatterns: [
       {
         protocol: "https",
@@ -12,8 +12,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // basePath: '/portfolio',   // 👈 use your repo name here
-  // assetPrefix: '/portfolio/', // 👈 also repo name
+  basePath: '/portfolio',   // 👈 use your repo name here
+  assetPrefix: '/portfolio/', // 👈 also repo name
 }
 
 export default nextConfig;
